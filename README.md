@@ -41,7 +41,7 @@ cd SpaceInvaders
 ```bash
 pip install pygame
 ```
-###3️⃣ Ejecuta el juego | Run the game
+### 3️⃣ Ejecuta el juego | Run the game
 
 ```bash
 python space_invaders.py
