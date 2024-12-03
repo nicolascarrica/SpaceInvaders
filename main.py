@@ -38,11 +38,6 @@ for i in range(num_of_enemies):
   enemyX_change.append(1)
   enemyY_change.append(40)
 
-# enemyImg = pygame.image.load('enemy.png')
-# enemyX = random.randint(0,735)
-# enemyY = random.randint(50,150)
-# enemyX_change = 1
-# enemyY_change = 40
 
 #bullet
 bulletImg = pygame.image.load('bullet.png')
@@ -52,7 +47,16 @@ bulletX_change = 0
 bulletY_change = 10
 bullet_state = "ready"
 
+#sore
 score_value = 0
+font = pygame.font.Font('fonts/PressStart2P-Regular.ttf',24)
+
+textX = 10
+textY = 10
+
+def show_score(x,y):
+  score = font.render("Score: " + str(score_value),True,(0,128,0))
+  screen.blit(score,(x,y))
 
 def player(x,y):
   screen.blit(playerImg,(x,y))
@@ -136,5 +140,6 @@ while running:
   
 
   player(playerX,playerY)
+  show_score(textX,textY)
   pygame.display.update()
 
